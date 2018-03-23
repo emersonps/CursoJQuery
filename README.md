@@ -31,7 +31,26 @@ Copia e cola no cabeçalho do site
 
 Notas Finais: Tente trabalhar usando apenas uma das 3 opções.
 
+<strong>Métodos de Inicialização e Carregamento</strong>
+   DOM (document object Model) - São objetos carregados. 
+   
+   <script type="text/javascript">
+			$(document).ready(function(){
+				alert('DOM Carregado!!! - Executa antes mesmo dos elementos serem carregados');
+			});
+   
+      $(window).load(function(){
+				alert('Elementos Carregados!!! - Executa quando todos os elementos forem carregados!!!');
+			});
+    </script>
 
+Obs.: Abaixo está o método resumido do primeiro exemplo anterior:
+$(function(){
+  //scripts
+})
+
+
+	
 
    
       
