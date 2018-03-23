@@ -11,7 +11,7 @@ Usar uma CDN:
   CDNJS CDN
   jsDelivr CDN
 
-Instalando o JQuery
+<strong>Instalando o JQuery</strong>
 
 1. Google CND: <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 Copia e cola no cabeçalho do site 
@@ -27,9 +27,10 @@ Copia e cola no cabeçalho do site
   Para evitar problemas com acesso ou atualização, basta renomear e deixar apenas como mostra abaixo:
       3.1 Copiar e colar o arquivo: jquery-3.3.1.min.js;
       3.2 Renomear o arquivo: jquery.js no diretório e no cabeçalho do site:
-      <script src="js/jquery.js"></script>
+      <script type="text/javascript" src="js/jquery.js"></script>
 
 Notas Finais: Tente trabalhar usando apenas uma das 3 opções.
+
 
 
    
