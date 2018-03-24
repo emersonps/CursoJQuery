@@ -140,7 +140,39 @@ $('*')<br>
 <br>
 <strong>8. Selecionar mais de um Elemento:</strong><br>
 $('h1, #link3').css("border-bottom","solid 3px blue");<br>
+<br><br>
+<strong>AULA 3</strong><br>
 <br>
+<strong>Seletores</strong>
+Basicamente aplica-se a mesma estrutura do CSS:<br>
+Exemplos<br>
+//Filhas<br>
+$('.div1 span')<br>
+	.hide()<br>
+	.delay('1000')<br>
+	.fadeIn(1000)<br>
+	.css({<br>
+		color:'green',<br>
+		'font-size':'15px',<br>
+	});<br>
+<br>
+$('.div1 h2')<br>
+	.hide()<br>
+	.css({<br>
+		'font-size':'50px',<br>
+		color:'red',<br>
+	})<br>
+	.fadeIn('1000');<br>
+<br>
+// Filhas diretas do Elemento<br>
+$('.div1 > span').css({<br>
+	color: 'red',<br>
+});<br>
+<br>
+// Primeiro elemento após o selecionado<br>
+$('.p1 + p').css('color','#fde')<br>
+<br>
+
 
       
       
