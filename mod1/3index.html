@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+				$('h2').css('margin','0');
+				$('p').css({
+					margin: '0',
+					color: 'blue',
+				});
+				$('.div1').css({
+					'margin-bottom':'20px', //todo atributo composto deve ser colocado entre aspas.
+					background: '#ccc',
+				});
+
+				//Filhas
+				$('.div1 span')
+					.hide()
+					.delay('1000')
+					.fadeIn(1000)
+					.css({
+						color:'green',
+						'font-size':'15px',
+					});
+
+				$('.div1 h2')
+					.hide()
+					.css({
+						'font-size':'50px',
+						color:'red',
+					})
+					.fadeIn('1000');
+				
+				// Filhas diretas do Elemento
+				$('.div1 > span').css({
+					color: 'red',
+				});
+
+				// Primeiro elemento após o selecionado
+				$('.p1 + p').css({'font-size':'25px'});
+
+				// Todos os elementos após o selecionado
+				$('.p1 ~ p').css({color:'black'});
+			});
+		</script>
+		<title>Documento</title>
+	</head>
+	<body>
+		<div class="div1">
+			<h2>H2 Filho de DIV1</h2>
+			<p>P filho de DIV 1 <span>SPAN filho de P</span></p>
+			<span>Span Filho Direto DIV1</span>
+		</div>
+		<h2>H2 Fora de Div1</h2>
+		<p class="p1">P1 fora de Div1</p>
+		<p>P2 fora de Div1</p>
+		<p>P3 fora de Div1</p>
+	</body>
+</html>
