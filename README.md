@@ -172,7 +172,9 @@ $('.div1 > span').css({<br>
 // Primeiro elemento após o selecionado<br>
 $('.p1 + p').css('color','#fde')<br>
 <br>
-
+// Todos os elementos após o selecionado<br>
+$('.p1 ~ p').css({color:'black'});<br>
+<br>
 
       
       
