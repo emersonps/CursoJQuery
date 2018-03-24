@@ -50,11 +50,129 @@ $(function(){<br>
 })<br>
 
 
+<strong>AULA 2</strong>	<br>
+Pra trabalhar com JQuery, preciamos ter uma base de seleção. Vamos aplicar de uma forma simples, diferentes soluições para o problema a seguir: Fazer a seleção de um elemento, seja ele uma classe ou tag:<br>
+<strong>1. Selector: <br></strong>
+$("") <br>
+ou:<br>
+$('')<br>
+<br>
+Exemplo:<br>
+$(document).ready(function)(){<br>
+   $('h1');<br>
+});<br>
+<br>
+Nota: Quando fazemos isso estamos usando o método de encapsulamento, ou seja, estamos pegando o DOM desse H1 e passando pra ele todas as funções nativas do JQuery.<br>
+<br>
+<strong>2. Atribuíndo uma função ou interação ao Seletor ou item selecionado:<br></strong>
+$(''). <br>
+Usamos o ponto após a aspas, no fim do seletor.<br>
+<br>
+Exemplo:<br>
+$('h1').css("color","#f66");<br>
+$('h1').css("color","#f66");<br>
+<br>
+Aplicando Funções nativas do JQuery<br>
+$('h1').hide();<br>
+$('h1').delay('1000');<br>
+$('h1').fadeIn("slow");<br>
+$('h1').text('Curso JQuery');<br>
+<br>
+<strong>3. Desencadeando as funções em apenas uma linha de comando:<br></strong>
+Basta separar as funções por ponto:<br>
+<br>
+$('h1').css("color","#f66").hide().delay('1000').fadeIn("slow").text('Curso JQuery');<br>
+<br>
+<strong>4. Desencadeando as funções em bloco (indicado para melhor revisar o código:<br></strong>
+<br>
+$('h1')<br>
+	.css("color","#f66")<br>
+	.hide()<br>
+	.delay('1000')<br>
+	.fadeIn("slow")<br>
+	.text('Curso JQuery');<br>
+<br>
+<strong>5. Colocando uma função dentro da função principal:<br></strong>
+<br>
+$(document).ready(function(){<br>
+$('h1')<br>
+&nbsp&nbsp.click(function(){<br>
+<br>
+});<br>
+});<br>
+<br>
+Exemplo:<br>
+<strong>Criaremos uma função para quando clicarmos no H1 ele mude a cor do Body:</strong><br>
+<br>
+$('h1')<br>
+.click(function(){<br>
+	$('body').css("background","#c30");<br>
+});<br>
+<br>
+<strong>Mais exemplos:</strong><br>
+.click(function(){<br>
+	$('body').css("background","#c30")<br>
+	$('h1').css("color","#fff")<br>
+	$('h1').text("Emerson");<br>
+});<br>
+<br>
+<strong>6. Colocando Várias Instruções CSS numa função:</strong><br>
+Exemplo:<br>
+$('a').css({color: "red', display:"block"});<br>
+<br>
+<strong>7. Atribuíndo uma Função Jquery a uma classe ou Id:</strong><br>
+$('.nomeDaClasse);<br>
+$('#nomeDaClasse);<br>
+<br>
+Exemplo:<br>
+$('.link2').css("color","green")<br>
+$('#link3').css("color","black");<br>
+<br>
+<strong>8. Atacando todos os Elementos da Página:</strong><br>
+Exemplo para resetar o margin e o padding da página:<br>
+<br>
+$('*')<br>
+.css("margin","0");<br>
+.css("padding","0");<br>
+<br>
+$('*')<br>
+.css({margin:"0",padding:"10"});<br>
+<br>
+<strong>8. Selecionar mais de um Elemento:</strong><br>
+$('h1, #link3').css("border-bottom","solid 3px blue");<br>
+<br><br>
+<strong>AULA 3</strong><br>
+<br>
+<strong>Seletores</strong>
+Basicamente aplica-se a mesma estrutura do CSS:<br>
+Exemplos<br>
+//Filhas<br>
+$('.div1 span')<br>
+	.hide()<br>
+	.delay('1000')<br>
+	.fadeIn(1000)<br>
+	.css({<br>
+		color:'green',<br>
+		'font-size':'15px',<br>
+	});<br>
+<br>
+$('.div1 h2')<br>
+	.hide()<br>
+	.css({<br>
+		'font-size':'50px',<br>
+		color:'red',<br>
+	})<br>
+	.fadeIn('1000');<br>
+<br>
+// Filhas diretas do Elemento<br>
+$('.div1 > span').css({<br>
+	color: 'red',<br>
+});<br>
+<br>
+// Primeiro elemento após o selecionado<br>
+$('.p1 + p').css('color','#fde')<br>
+<br>
 
-	
-
-   
-      
 
       
       
