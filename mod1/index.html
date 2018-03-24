@@ -1,33 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 	<head>
-		<!-- Usando CDN 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<!-- Baixando o Arquivo
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<!-- Baixando o Arquivo e Renomeando -->
 		<script type="text/javascript" src="js/jquery.js"></script>
-		
-		<!-- Inicialização do JQuery -->
 		<script type="text/javascript">
-			//DOM (document object Model) - São objetos carregados 
-
+			
 			$(document).ready(function(){
-				alert('DOM Carregado!!! - Executa antes mesmo dos elementos serem carregados');
-			});
+				$('h2').css('margin','0');
+				$('p').css({
+					margin: '0',
+					color: 'blue',
+				});
+				$('.div1').css({
+					'margin-bottom':'20px', //todo atributo composto deve ser colocado entre aspas.
+					background: '#ccc',
+				});
 
-			$(function(){
+				//Filhas
+				$('.div1 span')
+					.hide()
+					.delay('1000')
+					.fadeIn(1000)
+					.css({
+						color:'green',
+						'font-size':'15px',
+					});
+
+				$('.div1 h2')
+					.hide()
+					.css({
+						'font-size':'50px',
+						color:'red',
+					})
+					.fadeIn('1000');
 				
-			})
+				// Filhas diretas do Elemento
+				$('.div1 > span').css({
+					color: 'red',
+				});
 
-			$(window).load(function(){
-				alert('Elementos Carregados!!! - Executa quando todos os elementos forem carregados!!!');
+				// Primeiro elemento após o selecionado
+				$('.p1 + p').css({'font-size':'25px'});
+
+				// Todos os elementos após o selecionado
+				$('.p1 ~ p').css({color:'black'});
 			});
 		</script>
 		<title>Documento</title>
 	</head>
 	<body>
-
-		<img src="https://i0.wp.com/www.clicandoeandando.com/wp-content/uploads/2017/09/Como-Fotografar-Paisagens-Com-Lente-Grande-Angular-Ubatuba.jpg" />
+		<div class="div1">
+			<h2>H2 Filho de DIV1</h2>
+			<p>P filho de DIV 1 <span>SPAN filho de P</span></p>
+			<span>Span Filho Direto DIV1</span>
+		</div>
+		<h2>H2 Fora de Div1</h2>
+		<p class="p1">P1 fora de Div1</p>
+		<p>P2 fora de Div1</p>
+		<p>P3 fora de Div1</p>
 	</body>
 </html>

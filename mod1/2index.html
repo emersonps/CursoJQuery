@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<!-- Inicialização do JQuery -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				/*$('h1').css("color","#f66");
+				$('h1').hide();
+				$('h1').delay('1000');
+				$('h1').fadeIn("slow");
+				$('h1').text('Curso JQuery');*/
+
+				// $('h1').css("color","#f66").hide().delay('1000').fadeIn("slow").text('Curso JQuery');
+				/*
+				$('h1')
+					.css("color","#f66")
+					.hide()
+					.delay('1000')
+					.fadeIn("slow")
+					.text('Curso JQuery')
+					
+					.click(function(){
+						$('body').css("background","#c30")
+						$('h1').css("color","#fff")
+						$('h1').text("Emerson");
+					});
+				*/
+				$('a').css({color:"red", display: "block"});
+				$('.link2').css("color","green");
+				$('#link3').css("color","#000");
+				$('*').css({margin:"0",padding:"10"});
+				$('h1, #link3').css("border-bottom","solid 3px blue");
+				
+			});
+		</script>
+		<title>Documento</title>
+	</head>
+	<body>
+		<h1>PontoCanal Inscreva-se</h1>
+		<a href="#" >Link 1</a>
+		<a href="#" class="link2">Link 2</a>
+		<a href="#" id="link3">Link 3</a>
+	</body>
+</html>
