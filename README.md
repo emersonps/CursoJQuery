@@ -176,7 +176,76 @@ $('.p1 + p').css('color','#fde')<br>
 $('.p1 ~ p').css({color:'black'});<br>
 <br>
 
-      
-      
+<srtong>AULA 4, 5, 6 E 7</strong><br>
+<br>
+Algumas Funções do JQuery:<br>
+Revisão:<br>
+<br>
+4.1. Função principal de Jquery para um documento.<br>
+$(document).ready(function(){ <br>
+    demais funções do Jquery; <br>
+});<br>
+<br>
+4.2. Encapsulando Elementos:<br>
+$('elemento');<br>
+Ex: $('h1');<br>
+<br>
+4.3. Atribuindo Funções ao Elemento encapsulado:<br>
+Para atribuir uma função a outra função, basta separá-lkas por um '.':<br>
+$('elemento').função('atributo','valor');<br>
+Ex: $('h1').css('color','#fff');<br>
+<br>
+4.4. Atributos desencadeados:<br>
+Para apilcar mais de um atributo a uma função, podemos colocá-los dentro de chaves:<br>
+$('elemento').função({<br>
+	atributoSimples: "valor";<br>
+	"atributoComposto": "valor;<br>
+});<br>
+<br>
+4.5. Funções Desencadeadas:<br>
+$('elemento')<br>
+	.função1()<br>
+	.função2()<br>
+	.função3(função4(){<br>
+	});<br>
+	<br>
+4.5. Outras funções do JQuery:<br>
+.css() - atribui valores de estilos CSS;<br>
+.hide() - oculta um elemento;<br>
+.delay('ms*') - exibe o elemento de acordo com o tempo especificado em milésimos de segundos;<br>
+.fadeIn(tempo) - Completa efeito após segundos configurados;<br>
+.fadeOut(tempo) - esconde o conteúdo pós alguns segundos;<br>
+<br>
+*milesegundos.<br>
+<br>
+4.6. Eventos do Mouse:<br>
+Essas funções, são nativas do JQuery, por isso iniciaremos-na como uma outra função dentro da função de encapsulamento:<br>
+<br>
+Exemplo:<br>
+$('.h1').click(function(){<br>
+	$(this).css("background","#ccc"); //o this, nesse caso, atribui o valos de css no mesmo objeto encapsulado.<br>
+});<br>
+Vejamos algumas funções de Eventos de Mouse:<br>
+<br>
+.click() = retorna o clique único do mouse;<br>
+.dbclick() = retorna clique duplo do mouse;<br>
+.focusin() = retorna o foco do clique (onde foi clicado);<br>
+.focusout() = retira o foco do clique;<br>
+.hove() = retorna informação quando o mouse passa em uma região;<br>
+.mousedown() = retorna o clique do mouse;<br>
+.mouseup() = retorna informação quando solta o clique;<br>
+.mouseenter() = retorna a quantidade de cliques;<br>
+.mouseout() = retorna a quantidade de saídas do mouse;<br>
+.mouseover() = retorna quantidade de movimentos do mouse sobre o objeto;<br>
+.mouseleave() = retorna a saída do mouse sobre o objeto;<br>
+.mousemove() = retorna o valor da região em pixel por onde passa o mouse;<br>
+<br>
+5. EVENTOS DO TECLADO<br>
+<br>
+
+
+
+
+
      
 
