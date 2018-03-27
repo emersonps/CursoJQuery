@@ -240,7 +240,45 @@ Vejamos algumas funções de Eventos de Mouse:<br>
 .mouseleave() = retorna a saída do mouse sobre o objeto;<br>
 .mousemove() = retorna o valor da região em pixel por onde passa o mouse;<br>
 <br>
-5. EVENTOS DO TECLADO<br>
+<strong>5. EVENTOS DO TECLADO<br></strong><br>
+<br>
+.each() = retornar o valor capturado;<br>
+.val() = imprime o valor no objeto;<br>
+.focusin() = mostra legenda de texto quando focado o campo;<br>
+.focusout() = some legenda de texto quando focado o campo;<br>
+.keypress() = exibe caractere por caractere digitado; (com deley de um caractere sucessor)<br>
+.keydown() = igual o keypress;<br>
+.keyup() = imprime o texto em tempo real;(sem delay)<br>
+<br>
+Exemplo:<br>
+$('.place').each(function(){<br>
+	var place = $(this).attr('title');<br>
+	var input = $(this);<br>
+	<br>
+	input<br>
+		.val(place)<br>
+		.css('color','#000');<br>
+		.focusin(function(){<br>
+		input.css('color','#000');<br>
+		   if(input.val() == place){<br>
+			input.val('')<br>
+		   }<br>
+		})<br>
+		.focusout(function(){<br>
+		   if(input.val() == ''){<br>
+			input.css('color','#c<br>cc');<br>
+			input.val(place);<br>
+		   }<br>
+		})<br>
+    	});<br>
+	<br>
+	var ex = $('.ex1');<br>
+	$('.key').keyup(function(){<br>
+		ex.text($(this).val());<br>
+	});<br>
+})<br>
+<br>
+});<br>
 <br>
 
 
