@@ -1,3 +1,4 @@
+<PRE>
 # CursoJQuery
 Curso básico de JQuery<br>
 <br>
@@ -54,12 +55,12 @@ $(function(){<br>
 Pra trabalhar com JQuery, preciamos ter uma base de seleção. Vamos aplicar de uma forma simples, diferentes soluições para o problema a seguir: Fazer a seleção de um elemento, seja ele uma classe ou tag:<br>
 <strong>1. Selector: <br></strong>
 $("") <br>
-ou:<br>
+  ou:<br>
 $('')<br>
 <br>
 Exemplo:<br>
 $(document).ready(function)(){<br>
-   $('h1');<br>
+$('h1');<br>
 });<br>
 <br>
 Nota: Quando fazemos isso estamos usando o método de encapsulamento, ou seja, estamos pegando o DOM desse H1 e passando pra ele todas as funções nativas do JQuery.<br>
@@ -78,6 +79,7 @@ $('h1').delay('1000');<br>
 $('h1').fadeIn("slow");<br>
 $('h1').text('Curso JQuery');<br>
 <br>
+<PRE>
 <strong>3. Desencadeando as funções em apenas uma linha de comando:<br></strong>
 Basta separar as funções por ponto:<br>
 <br>
@@ -116,6 +118,8 @@ $('h1')<br>
 	$('h1').text("Emerson");<br>
 });<br>
 <br>
+</PRE>
+<PRE>
 <strong>6. Colocando Várias Instruções CSS numa função:</strong><br>
 Exemplo:<br>
 $('a').css({color: "red', display:"block"});<br>
@@ -141,6 +145,8 @@ $('*')<br>
 <strong>8. Selecionar mais de um Elemento:</strong><br>
 $('h1, #link3').css("border-bottom","solid 3px blue");<br>
 <br><br>
+</PRE>
+<PRE>
 <strong>AULA 3</strong><br>
 <br>
 <strong>Seletores</strong>
@@ -280,7 +286,43 @@ $('.place').each(function(){<br>
 <br>
 });<br>
 <br>
+<strong>5. EVENTOS DO FORMULÁRIO<br></strong><br>
+<br>
+.hide('slow'); (fast ou em milisegundos) - Dispara uma função que oculta o elemento encapsulado;<br>
+.show('slow'); (fast ou em milisegundos) - Dispara uma função que exibe o elemento encapsulado;<br>
+.toggle('slow') (fast ou em milisegundos) - Dispara uma função que exibe e oculta o elemento encapsulado;<br>
+<br>
+</PRE>
 
+<PRE>
+<strong>6. EFEITOS DE DESVANECIMENTO<br></strong><br>
+NOTA: Para encapsular inputs usa-se ':' inves de '.' => $(':button').
+
+Exemplos de Desvanecimento:
+6.1.
+button.click(function(){
+	ex.fadeOut("slow");
+}).dblclick(function(){
+	ex.fadeIn("slow");
+});
+
+6.2.
+button.click(function(){
+	ex.fadeTo('slow',0.3); //50% de visibilidade
+});
+
+6.3.
+button.click(function(){
+	ex.fadeToggle('slow');
+});
+
+6.4.
+button.click(function(){ //callback - dispara uma função após a outra.
+	ex.fadeTo(3000,0.4,function(){
+		ex2.fadeTo('slow',0.2);
+	});
+});	
+</PRE>
 
 
 
