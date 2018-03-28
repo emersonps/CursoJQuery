@@ -1,12 +1,13 @@
 body{font:14px;}
 
-.ex1{
+.ex1, .ex2{
 	width: 460px;
 	padding: 20px;
 	background: #1e90ff;
 	margin: 0 auto;
 	text-align: center;
 	color: #fff;
+	margin-bottom: 5px;
 }
 
 p, input{
@@ -19,4 +20,12 @@ p, input{
 	border: 5px solid #ccc;
 	margin-top: 10px;
 	display: flex;
+}
+
+button{
+	margin: 0 auto;
+	display: flex;
+	padding: 20px;
+	width: 500px;
+	font-size: 20px;
 }
