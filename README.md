@@ -55,12 +55,12 @@ $(function(){<br>
 Pra trabalhar com JQuery, preciamos ter uma base de seleção. Vamos aplicar de uma forma simples, diferentes soluições para o problema a seguir: Fazer a seleção de um elemento, seja ele uma classe ou tag:<br>
 <strong>1. Selector: <br></strong>
 $("") <br>
-ou:<br>
+  ou:<br>
 $('')<br>
 <br>
 Exemplo:<br>
 $(document).ready(function)(){<br>
-   $('h1');<br>
+$('h1');<br>
 });<br>
 <br>
 Nota: Quando fazemos isso estamos usando o método de encapsulamento, ou seja, estamos pegando o DOM desse H1 e passando pra ele todas as funções nativas do JQuery.<br>
@@ -79,6 +79,7 @@ $('h1').delay('1000');<br>
 $('h1').fadeIn("slow");<br>
 $('h1').text('Curso JQuery');<br>
 <br>
+<PRE>
 <strong>3. Desencadeando as funções em apenas uma linha de comando:<br></strong>
 Basta separar as funções por ponto:<br>
 <br>
@@ -117,6 +118,8 @@ $('h1')<br>
 	$('h1').text("Emerson");<br>
 });<br>
 <br>
+</PRE>
+<PRE>
 <strong>6. Colocando Várias Instruções CSS numa função:</strong><br>
 Exemplo:<br>
 $('a').css({color: "red', display:"block"});<br>
@@ -142,6 +145,8 @@ $('*')<br>
 <strong>8. Selecionar mais de um Elemento:</strong><br>
 $('h1, #link3').css("border-bottom","solid 3px blue");<br>
 <br><br>
+</PRE>
+<PRE>
 <strong>AULA 3</strong><br>
 <br>
 <strong>Seletores</strong>
