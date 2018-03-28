@@ -294,6 +294,36 @@ $('.place').each(function(){<br>
 <br>
 </PRE>
 
+<PRE>
+<strong>6. EFEITOS DE DESVANECIMENTO<br></strong><br>
+NOTA: Para encapsular inputs usa-se ':' inves de '.' => $(':button').
+
+Exemplos de Desvanecimento:
+6.1.
+button.click(function(){
+	ex.fadeOut("slow");
+}).dblclick(function(){
+	ex.fadeIn("slow");
+});
+
+6.2.
+button.click(function(){
+	ex.fadeTo('slow',0.3); //50% de visibilidade
+});
+
+6.3.
+button.click(function(){
+	ex.fadeToggle('slow');
+});
+
+6.4.
+button.click(function(){ //callback - dispara uma função após a outra.
+	ex.fadeTo(3000,0.4,function(){
+		ex2.fadeTo('slow',0.2);
+	});
+});	
+</PRE>
+
 
 
 
