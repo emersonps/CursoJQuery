@@ -1,3 +1,4 @@
+<PRE>
 # CursoJQuery
 Curso básico de JQuery<br>
 <br>
@@ -286,7 +287,7 @@ $('.place').each(function(){<br>
 .show('slow'); (fast ou em milisegundos) - Dispara uma função que exibe o elemento encapsulado;<br>
 .toggle('slow') (fast ou em milisegundos) - Dispara uma função que exibe e oculta o elemento encapsulado;<br>
 <br>
-
+</PRE>
 
 
 
