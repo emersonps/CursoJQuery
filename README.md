@@ -1,19 +1,19 @@
 <PRE>
 # CursoJQuery
-Curso básico de JQuery<br>
-<br>
-http://jquery.com/download/<br>
+Curso básico de JQuery
+	
+http://jquery.com/download/
 
-Modo de Download do JQuery:<br>
-Baixar direto para o computador;<br>
+Modo de Download do JQuery:
+Baixar direto para o computador;
 Usar uma CDN:<br>
   Google CDN<br>
   Microsoft CDN<br>
   CDNJS CDN<br>
   jsDelivr CDN<br>
 
-<strong>Instalando o JQuery</strong><br>
-<br>
+<strong>Instalando o JQuery</strong>
+	'	' 
 1. Google CND: <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <br>
 Copia e cola no cabeçalho do site <br>
   Obs: o sistema só irá funcionar de houver uma conexão com a internet.<br>
