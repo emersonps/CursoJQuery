@@ -280,6 +280,11 @@ $('.place').each(function(){<br>
 <br>
 });<br>
 <br>
+<strong>5. EVENTOS DO FORMULÁRIO<br></strong><br>
+
+.hide('slow'); (fast ou em milisegundos) - Dispara uma função que oculta o elemento encapsulado;
+.show('slow'); (fast ou em milisegundos) - Dispara uma função que exibe o elemento encapsulado;
+.toggle('slow') (fast ou em milisegundos) - Dispara uma função que exibe e oculta o elemento encapsulado;
 
 
 
