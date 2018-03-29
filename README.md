@@ -324,7 +324,7 @@ button.click(function(){ //callback - dispara uma função após a outra.
 </PRE>
 
 <PRE>
-<strong>7. CRIANDO UM MENU FIXO</strong
+	<strong>7. CRIANDO UM MENU FIXO</strong>
      $(function(){
      var nav = $('.menu');
 	     $(window).scroll(function(){
