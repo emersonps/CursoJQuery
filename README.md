@@ -323,6 +323,21 @@ button.click(function(){ //callback - dispara uma função após a outra.
 });	
 </PRE>
 
+<PRE>
+<strong>7. CRIANDO UM MENU FIXO</strong
+     $(function(){
+     var nav = $('.menu');
+	     $(window).scroll(function(){
+
+		if($(this).scrollTop() > 173){
+
+			nav.addClass("menu-fixo");
+		}else{
+			nav.removeClass("menu-fixo");
+		}
+	     });
+	});
+</PRE>
 
 
 
