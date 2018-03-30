@@ -342,9 +342,10 @@ button.click(function(){ //callback - dispara uma função após a outra.
 <PRE>
 <strong>8. CRIANDO UM SLIDE SHOW SEM PLUGIN</strong>
 $(function(){
-$('#slide img:eq(0)').addClass("ativo").show(); //primeira tag da imagem que ele encontrar (primeira filha)
-//Com a class Ativo selecionaremos o alt da imagem que possui essa classe e vamos fazer com que o Alt se torne uma tag de parágrafo, sendo ela a porimeira filha da nossa tag figure
-	var texto= $(".ativo").attr("alt"); //attr pega o tributo 
+$('#slide img:eq(0)').addClass("ativo").show(); //primeira tag da imagem que ele encontrar (primeira filha);
+
+//Com a class Ativo selecionaremos o alt da imagem que possui essa classe e vamos fazer com que o Alt se torne uma tag de parágrafo, sendo ela a porimeira filha da nossa tag figure;
+	var texto= $(".ativo").attr("alt"); //attr pega o atributo 
 	$('#slide').prepend("<p>"+texto+"</p>");
 	setInterval(slide, 3000);//temporizador; slide: nome da função que gera as transições e as mudanças de legendas -> abaixo;
 
@@ -368,6 +369,25 @@ $('#slide img:eq(0)').addClass("ativo").show(); //primeira tag da imagem que ele
 });
 </PRE>
 
+<PRE>
+<strong>9. CRIANDO MENU COM EFEITIO SANFONA</strong>
+	$(function(){
+	$('.titulo').click(function(){
+		var conteudo = $(this).parent().find('.conteudo'); //parent faz a div voltar ao ancestral dela. (div caixa), sem seguida procurar por um filho caixa que tenha a classa conteúdo.
 
+		if(!conteudo.hasClass('show')){ //perguntando para o sistema se na div conteudo não tiver a class show, oculta todo o conteúdo da caixa
+			$('.caixa').find('.show').slideUp('fast', function(){
+				$(this).addClass('hide').removeClass('show');
+			});
+
+			conteudo.slideDown('fast',function(){
+				$(this).addClass('show').removeClass('hide');
+			});
+		}
+		});
+	});	
+</PRE>
+
+Fim!!!
      
 
