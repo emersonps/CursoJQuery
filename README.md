@@ -1,64 +1,63 @@
 <PRE>
 # CursoJQuery
-Curso básico de JQuery<br>
-<br>
-http://jquery.com/download/<br>
+Curso básico de JQuery
+	
+http://jquery.com/download/
 
-Modo de Download do JQuery:<br>
-Baixar direto para o computador;<br>
+Modo de Download do JQuery:
+Baixar direto para o computador;
 Usar uma CDN:<br>
   Google CDN<br>
   Microsoft CDN<br>
   CDNJS CDN<br>
   jsDelivr CDN<br>
 
-<strong>Instalando o JQuery</strong><br>
-<br>
-1. Google CND: <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <br>
-Copia e cola no cabeçalho do site <br>
-  Obs: o sistema só irá funcionar de houver uma conexão com a internet.<br>
+<strong>Instalando o JQuery</strong>
 
-2. Baixando o arquivo:<br>
-  2.1 No site clique no link: Download the compressed, production jQuery 3.3.1<br>
-  2.2 Ao exibir os comando na página web, pressiona CTRL+S e salva na paste do projeto (JS).<br>
-  2.3 No cabeçalho do site digite a seguinte linha:<br>
-      <script src="js/jquery-3.3.1.min.js"></script><br>
-  Obs.: Nesse caso, toda vez que o o JQuery fir atualizado, essa linha terá que ser atualizada manualmente.<br>
-3. Baixando e renomeando:<br>
-  Para evitar problemas com acesso ou atualização, basta renomear e deixar apenas como mostra abaixo:<br>
-      3.1 Copiar e colar o arquivo: jquery-3.3.1.min.js;<br>
-      3.2 Renomear o arquivo: jquery.js no diretório e no cabeçalho do site:<br>
-      <script type="text/javascript" src="js/jquery.js"></script><br>
-<br>
-Notas Finais: Tente trabalhar usando apenas uma das 3 opções.<br>
-<br>
-<strong>Métodos de Inicialização e Carregamento</strong><br>
-   DOM (document object Model) - São objetos carregados. <br>
-<br>   
-   <script type="text/javascript"><br>
-	$(document).ready(function(){<br>
-		alert('DOM Carregado!!! - Executa antes mesmo dos elementos serem carregados');<br>
-	});<br>
-<br>
-	$(window).load(function(){<br>
-		alert('Elementos Carregados!!! - Executa quando todos os elementos forem carregados!!!');<br>
-	});<br>
-    </script><br>
+1. Google CND: <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+Copia e cola no cabeçalho do site
+  Obs: o sistema só irá funcionar de houver uma conexão com a internet.
 
-Obs.: Abaixo está o método resumido do primeiro exemplo anterior:<br>
-$(function(){<br>
-  //scripts<br>
-})<br>
+2. Baixando o arquivo:
+  2.1 No site clique no link: Download the compressed, production jQuery 3.3.1
+  2.2 Ao exibir os comando na página web, pressiona CTRL+S e salva na paste do projeto (JS).
+  2.3 No cabeçalho do site digite a seguinte linha:
+      <script src="js/jquery-3.3.1.min.js"></script>
+  Obs.: Nesse caso, toda vez que o o JQuery fir atualizado, essa linha terá que ser atualizada manualmente.
+3. Baixando e renomeando:
+  Para evitar problemas com acesso ou atualização, basta renomear e deixar apenas como mostra abaixo:
+      3.1 Copiar e colar o arquivo: jquery-3.3.1.min.js;
+      3.2 Renomear o arquivo: jquery.js no diretório e no cabeçalho do site:
+      <script type="text/javascript" src="js/jquery.js"></script>
 
+Notas Finais: Tente trabalhar usando apenas uma das 3 opções.
 
-<strong>AULA 2</strong>	<br>
-Pra trabalhar com JQuery, preciamos ter uma base de seleção. Vamos aplicar de uma forma simples, diferentes soluições para o problema a seguir: Fazer a seleção de um elemento, seja ele uma classe ou tag:<br>
-<strong>1. Selector: <br></strong>
-$("") <br>
-  ou:<br>
-$('')<br>
-<br>
-Exemplo:<br>
+<strong>Métodos de Inicialização e Carregamento</strong>
+   DOM (document object Model) - São objetos carregados.
+   
+   <script type="text/javascript">
+	$(document).ready(function(){
+		alert('DOM Carregado!!! - Executa antes mesmo dos elementos serem carregados');
+	});
+
+	$(window).load(function(){
+		alert('Elementos Carregados!!! - Executa quando todos os elementos forem carregados!!!');
+	});
+    </script>
+
+Obs.: Abaixo está o método resumido do primeiro exemplo anterior:
+$(function(){
+  //scripts
+})
+
+<strong>AULA 2</strong>
+Pra trabalhar com JQuery, preciamos ter uma base de seleção. Vamos aplicar de uma forma simples, diferentes soluições para o problema a seguir: Fazer a seleção de um elemento, seja ele uma classe ou tag:
+<strong>1. Selector: </strong>
+$("") 
+  ou:
+$('')
+
+Exemplo:
 $(document).ready(function)(){<br>
 $('h1');<br>
 });<br>
@@ -324,8 +323,71 @@ button.click(function(){ //callback - dispara uma função após a outra.
 });	
 </PRE>
 
+<PRE>
+<strong>7. CRIANDO UM MENU FIXO</strong>
+     $(function(){
+     var nav = $('.menu');
+	     $(window).scroll(function(){
 
+		if($(this).scrollTop() > 173){
 
+			nav.addClass("menu-fixo");
+		}else{
+			nav.removeClass("menu-fixo");
+		}
+	     });
+	});
+</PRE>
 
+<PRE>
+<strong>8. CRIANDO UM SLIDE SHOW SEM PLUGIN</strong>
+$(function(){
+$('#slide img:eq(0)').addClass("ativo").show(); //primeira tag da imagem que ele encontrar (primeira filha);
+
+//Com a class Ativo selecionaremos o alt da imagem que possui essa classe e vamos fazer com que o Alt se torne uma tag de parágrafo, sendo ela a porimeira filha da nossa tag figure;
+	var texto= $(".ativo").attr("alt"); //attr pega o atributo 
+	$('#slide').prepend("<p>"+texto+"</p>");
+	setInterval(slide, 3000);//temporizador; slide: nome da função que gera as transições e as mudanças de legendas -> abaixo;
+
+	function slide(){
+
+		if($('.ativo').next().size()){
+			
+			$('.ativo').fadeOut().removeClass("ativo").next().fadeIn().addClass("ativo");
+
+		}else{
+
+			$('.ativo').fadeOut().removeClass("ativo");
+			$('#slide img:eq(0)').fadeIn().addClass("ativo");
+
+		}
+
+		var texto = $(".ativo").attr("alt");
+		$('#slide p').hide().html(texto).delay(500).fadeIn();
+	}
+
+});
+</PRE>
+
+<PRE>
+<strong>9. CRIANDO MENU COM EFEITIO SANFONA</strong>
+	$(function(){
+	$('.titulo').click(function(){
+		var conteudo = $(this).parent().find('.conteudo'); //parent faz a div voltar ao ancestral dela. (div caixa), sem seguida procurar por um filho caixa que tenha a classa conteúdo.
+
+		if(!conteudo.hasClass('show')){ //perguntando para o sistema se na div conteudo não tiver a class show, oculta todo o conteúdo da caixa
+			$('.caixa').find('.show').slideUp('fast', function(){
+				$(this).addClass('hide').removeClass('show');
+			});
+
+			conteudo.slideDown('fast',function(){
+				$(this).addClass('show').removeClass('hide');
+			});
+		}
+		});
+	});	
+</PRE>
+
+Fim!!!
      
 
