@@ -322,9 +322,34 @@ button.click(function(){ //callback - dispara uma função após a outra.
 	});
 });	
 </PRE>
+<PRE>
+<strong>6. Navegação em Elementos Ascendentes no DOM:</strong>
+html:
+	<div class="caixa"> (Class PAI)
+		<div class="titulo">Primeira Sessão</div>
+			(conteúdo)	
+		</div>		
+		<div class="conteudo hide">
+			(conteúdo)
+		</div>
+	</div>
+
+
+Jquery:
+	$('.titulo').click(function(){
+		var conteudo = $($this).parent().find('.conteudo')
+	});
+	
+Parent = Volta ao ancestral do objeto selecionado, ou sejam, volta para a class="caixa".
+
+6.1 findClass =  Procura pelo proximo filho, ou seja, class="conteudo").
+6.2 hasClass = Verifica se um ou mais elementos já possui a classe específica.
+6.3 addClass = Adiciona um nome de classe a um ou vários elementos.
+6.4 removeClass = contrário do addClass.
+</PRE>
 
 <PRE>
-<strong>7. CRIANDO UM MENU FIXO</strong>
+<strong>8. CRIANDO UM MENU FIXO</strong>
      $(function(){
      var nav = $('.menu');
 	     $(window).scroll(function(){
@@ -340,7 +365,7 @@ button.click(function(){ //callback - dispara uma função após a outra.
 </PRE>
 
 <PRE>
-<strong>8. CRIANDO UM SLIDE SHOW SEM PLUGIN</strong>
+<strong>9. CRIANDO UM SLIDE SHOW SEM PLUGIN</strong>
 $(function(){
 $('#slide img:eq(0)').addClass("ativo").show(); //primeira tag da imagem que ele encontrar (primeira filha);
 
@@ -370,7 +395,7 @@ $('#slide img:eq(0)').addClass("ativo").show(); //primeira tag da imagem que ele
 </PRE>
 
 <PRE>
-<strong>9. CRIANDO MENU COM EFEITIO SANFONA</strong>
+<strong>10. CRIANDO MENU COM EFEITIO SANFONA</strong>
 	$(function(){
 	$('.titulo').click(function(){
 		var conteudo = $(this).parent().find('.conteudo'); //parent faz a div voltar ao ancestral dela. (div caixa), em seguida procurar por um filho caixa que tenha a classa conteúdo.
