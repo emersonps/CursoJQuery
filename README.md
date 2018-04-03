@@ -413,6 +413,10 @@ $('#slide img:eq(0)').addClass("ativo").show(); //primeira tag da imagem que ele
 	});	
 </PRE>
 
+
+DOCUMENTAÇÃO JQUERY
+http://learn.jquery.com/using-jquery-core/traversing/
+
 Fim!!!
      
 
