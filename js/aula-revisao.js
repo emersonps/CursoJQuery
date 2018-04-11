@@ -12,6 +12,8 @@ $(function(){
 			}
 	});
 
+	
+
 	$('.titulo').click(function(){
 
 		var conteudo = $(this).parent().find('.conteudo'); //parent faz a div voltar ao ancestral dela. (div caixa), sem seguida procurar por um filho caixa que tenha a classa conteúdo.
